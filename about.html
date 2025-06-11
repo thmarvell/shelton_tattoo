@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelton Tattoo</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho__social-icons">
+      <!-- Instagram -->
+      <a class="cabecalho__social-icons__ancora__instagram"
+        href="https://www.instagram.com/shelton_tattoo_arte?igsh=M285Y2oxNXB4MnBm" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a class="cabecalho__social-icons__ancora__facebook" href="https://www.facebook.com/sheltontattoo.silva"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="cabecalho__social-icons__ancora__whatsapp" href="https://wa.me/5511975573591" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="cabecalho__whats">
+      <a href="https://wa.me/5511975573591" target="_blank" rel="noopener noreferrer"><img src="whats.png"
+          alt="botão whatsapp"></a>
+    </div>
+    <nav class="cabecalho__navegacao">
+      <ul class="cabecalho__navegacao__lista">
+        <li class="cabecalho__navegacao__lista__item"><a href="index.html">INÍCIO</a></li>
+        <li id="sobre" class="cabecalho__navegacao__lista__item"><img class="cabecalho__maquina" src="1749236599805.png"
+            alt="maquina de tattoo"><a href="about.html">SOBRE</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="tattoo.html">TATTOO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="design.html">DESENHO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="screens.html">TELA</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+      <span class="menu-icon">&#9776;</span> <!-- Ícone de menu (☰) -->
+    </button>
+  </header>
+  <main>
+    <h1 class="about-title">Shelton Tattoo</h1>
+    <!-- Seção 1 -->
+    <div id="pricipal__section" class="section">
+      <div class="text">
+        <h2>Início com o Lápis</h2>
+        <p>Desde pequeno, ele sempre gostou de desenhar. Com apenas alguns lápis e papel, passava horas criando
+          personagens e paisagens. Essa paixão pelo traço foi o primeiro passo de uma jornada artística.</p>
+      </div>
+      <div class="image">
+        <img src="shelton_desenho.png" alt="Desenhos a lápis">
+      </div>
+    </div>
+
+    <!-- Seção 2 -->
+    <div class="section">
+      <div class="text">
+        <h2>Da Tela ao Estilo</h2>
+        <p>Com o tempo, começou a explorar a pintura em tela. As cores trouxeram vida às suas ideias e ajudaram a formar
+          o
+          estilo que mais tarde definiria suas tatuagens.</p>
+      </div>
+      <div class="image">
+        <img src="shelton_tigre.png" alt="Pintura em tela">
+      </div>
+    </div>
+
+    <!-- Seção 3 -->
+    <div class="section">
+      <div class="text">
+        <h2>O Primeiro Traço na Pele</h2>
+        <p>A curiosidade pela tatuagem surgiu naturalmente. Depois de muito estudo, prática e dedicação, começou a
+          tatuar
+          — transformando pele em arte e realizando sonhos através do traço.</p>
+      </div>
+      <div class="image">
+        <img src="shelton_tattoo.png" alt="Tatuando cliente">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Shelton Tattoo. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuList = document.querySelector('.cabecalho__navegacao__lista');
+    const menuIcon = menuToggle.querySelector('.menu-icon');
+    const fotosSection = document.getElementById('pricipal__section');
+
+    menuToggle.addEventListener('click', () => {
+      const menuAtivo = menuList.classList.toggle('ativo');
+      menuIcon.textContent = menuAtivo ? '✖' : '☰';
+      fotosSection.style.marginTop = menuAtivo ? '38vh' : '10vh';
+    });
+  </script>
+</body>
+
+</html>

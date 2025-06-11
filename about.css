@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Iceberg&family=Oswald:wght@200..700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+}
+
+* {
+	/*outline: solid 2px red;*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('back_ground.jpeg');
+	font-family: 'Segoe UI', sans-serif;
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
+	color: white;
+}
+
+.cabecalho {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+	background-color: #2d2d2d;
+	padding: 1% 1%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.cabecalho__social-icons {
+	margin: 0px;
+	position: relative;
+	display: flex;
+	gap: 15px;
+}
+
+.cabecalho__social-icons a {
+	font-size: 30px;
+	color: #ffffff;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+/* Mudando a cor d icone quando passar o mouse */
+.cabecalho__social-icons a:hover {
+	transform: scale(1.2);
+}
+
+.fa-instagram:hover {
+	color: #E4405F;
+}
+
+.fa-facebook:hover {
+	color: #1877F2;
+}
+
+.fa-whatsapp:hover {
+	color: #25D366;
+}
+
+.cabecalho__whats {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.cabecalho__whats:hover {
+	transform: scale(1.3);
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 8px 16px 0 rgba(0, 255, 115, 0.2);
+	}
+
+	50% {
+		transform: scale(1.1);
+		box-shadow: 0 12px 20px 0 rgba(0, 255, 115, 0.4);
+	}
+
+	100% {
+		transform: scale(1);
+		box-shadow: 0 8px 16px 0 rgba(0, 255, 115, 0.2);
+	}
+}
+
+.cabecalho__whats {
+	animation: pulsate 2s infinite;
+}
+
+.cabecalho__navegacao__lista {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: end;
+	gap: 30px;
+}
+
+nav ul li a {
+	font-family: "Bodoni Moda", serif;
+	text-decoration: none;
+	color: white;
+	text-shadow: 2px 2px 2px #8c0b0b;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+nav ul li a:hover {
+	color: #e63946;
+	text-shadow: 1px 1px 1px #ffffff;
+	transform: scale(1.5);
+	border-radius: 20px 0px;
+	border-bottom: solid 2px #e63946;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+nav ul li a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0;
+	height: 2px;
+	background-color: #e63946;
+	transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+	width: 100%;
+}
+
+#sobre {
+	text-decoration: underline;
+}
+
+
+.about-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 6vh;
+	text-align: center;
+	font-size: 5.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	position: relative;
+	border-bottom: solid 2px #ffffff;
+	width: 74%;
+	top: 45px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	white-space: nowrap;
+	font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+	background: linear-gradient(to bottom,
+			rgba(255, 255, 255, 0.731) 30%,
+			rgba(49, 1, 1, 0.619) 76%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.menu-toggle {
+	display: none;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.6rem;
+	cursor: pointer;
+	z-index: 1100;
+}
+
+.fotos {
+	transition: margin-top 0.3s ease;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 10%;
+	width: 100%;
+}
+
+.section:nth-child(even) {
+	flex-direction: row-reverse;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+}
+
+.section:nth-child(odd) {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+}
+
+.text {
+	flex: 1;
+	padding: 20px;
+}
+
+.image {
+	flex: 1;
+	padding: 20px;
+}
+
+.image img {
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: 10px;
+	color: #cecece;
+}
+
+@media (max-width: 768px) {
+	.section {
+		margin-top: 5vh;
+		flex-direction: column !important;
+		text-align: center;
+	}
+
+	.text,
+	.image {
+		padding: 10px;
+	}
+}
+
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	padding: 20px;
+	background: #111;
+}
+
+@media (max-width:1180px) {
+	.about-title {
+
+		font-size: 3.5rem;
+	}
+
+	.cabecalho .cabecalho__maquina {
+		width: 30px;
+	}
+
+	.cabecalho__whats {
+		bottom: 100px;
+	}
+
+	.principal .principal__logo-container__maquina {
+		margin-left: 0;
+	}
+
+}
+
+@media (max-width:768px) {
+
+
+	nav ul li a {
+		font-size: 0.8rem;
+	}
+
+	.about-title {
+		margin-top: 0;
+		font-size: 2.5rem;
+	}
+
+	.cabecalho .cabecalho__maquina {
+		width: 20px;
+	}
+
+	.principal .principal__logo-container__maquina {
+		margin-left: 0;
+	}
+
+	.cabecalho__whats {
+		bottom: 100px;
+	}
+}
+
+@media (max-width:545px) {
+	.about-title {
+
+		font-size: 2.0rem;
+	}
+
+	.cabecalho__social-icons a {
+		font-size: 20px;
+	}
+
+	nav ul li a {
+		font-size: 0.5rem;
+	}
+
+	.cabecalho .cabecalho__maquina {
+		width: 15px;
+	}
+
+	.principal .principal__logo-container__maquina {
+		margin-left: 0;
+	}
+
+	.cabecalho__whats {
+		bottom: 100px;
+	}
+}
+
+@media (max-width:430px) {
+
+	.cabecalho__social-icons a {
+		font-size: 2.0rem;
+	}
+
+	nav ul li a {
+		font-size: 0.3rem;
+	}
+
+	.principal {
+		padding-top: 0;
+	}
+
+	body {
+		background-size: cover;
+	}
+
+	.about-title {
+		font-size: 2.0rem;
+		width: 85%;
+	}
+
+	.cabecalho .cabecalho__maquina {
+		display: none;
+	}
+
+	.cabecalho__social-icons {
+		display: inline-block;
+		left: -20%;
+	}
+
+	.cabecalho__whats {
+		bottom: 40px;
+		left: 5px;
+		width: 78px;
+		height: 78px;
+
+		& img {
+			width: 80px;
+		}
+	}
+
+	.cabecalho__navegacao__lista {
+		display: none;
+		position: absolute;
+		flex-direction: column;
+		top: 15vh;
+		left: 50%;
+		gap: 0.5vh;
+		transform: translateX(-50%);
+		align-items: center;
+		border-radius: 20px;
+		border-right: solid 2px #ffffff;
+		border-bottom: solid 2px #ffffff;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+		padding: 2%;
+	}
+
+	.cabecalho__navegacao__lista.ativo {
+		display: flex;
+	}
+
+	nav ul li a {
+		font-size: 1.2rem;
+	}
+
+	#pricipal__section {
+		margin-top: 10vh;
+		border: solid 2px white;
+	}
+
+	nav ul li {
+		border-bottom: solid 2px #e63946;
+		border-radius: 20px 5px;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+	}
+
+	.menu-toggle {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+	}
+
+
+}

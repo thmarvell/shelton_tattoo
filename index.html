@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelton Tattoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho__social-icons">
+      <!-- Instagram -->
+      <a class="cabecalho__social-icons__ancora__instagram"
+        href="https://www.instagram.com/shelton_tattoo_arte?igsh=M285Y2oxNXB4MnBm" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a class="cabecalho__social-icons__ancora__facebook" href="https://www.facebook.com/sheltontattoo.silva"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="cabecalho__social-icons__ancora__whatsapp" href="https://wa.me/5511975573591" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="cabecalho__whats">
+      <a href="https://wa.me/5511975573591" target="_blank" rel="noopener noreferrer"><img src="whats.png"
+          alt="botão whatsapp"></a>
+    </div>
+    <nav class="cabecalho__navegacao">
+      <ul class="cabecalho__navegacao__lista">
+        <li id="home" class="cabecalho__navegacao__lista__item"><img class="cabecalho__maquina" src="1749236599805.png"
+            alt="maquina de tattoo"><a href="index.html">INÍCIO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="about.html">SOBRE</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="tattoo.html">TATTOO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="design.html">DESENHO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="screens.html">TELA</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+      <span class="menu-icon">&#9776;</span> <!-- Ícone de menu (☰) -->
+    </button>
+  </header>
+  <main class="principal">
+    <h1 class="about-title">Shelton Tattoo</h1>
+    <section id="home" class="principal__logo-container">
+      <img class="principal__logo-container__maquina" src="1749236599806.png" alt="maquina de tattoo">
+      <img class="principal__logo-container__logo" src="1749240479556.png" alt="Logo Shelton Tattoo">
+      <img class="principal__logo-container__tatuada" src="1749169823786.png" alt="mulher tatuada">
+    </section>
+    <section id="home" class="principal__video">
+      <!--<img src="shelton_tatuando.jpeg" alt="shelton tatuando">-->
+      <video autoplay="" loop="" muted="" width="300">
+        <source src="video_shelton.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <footer>
+      <p>&copy; 2025 Shelton Tattoo. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuList = document.querySelector('.cabecalho__navegacao__lista');
+      const menuIcon = menuToggle.querySelector('.menu-icon');
+      const fotosSection = document.querySelector('.fotos');
+
+      menuToggle.addEventListener('click', () => {
+        const menuAtivo = menuList.classList.toggle('ativo');
+        menuIcon.textContent = menuAtivo ? '✖' : '☰';
+        fotosSection.style.marginTop = menuAtivo ? '23vh' : '0';
+      });
+    </script>
+</body>
+
+</html>

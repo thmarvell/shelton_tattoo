@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelton Tattoo</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho__social-icons">
+      <!-- Instagram -->
+      <a class="cabecalho__social-icons__ancora__instagram"
+        href="https://www.instagram.com/shelton_tattoo_arte?igsh=M285Y2oxNXB4MnBm" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a class="cabecalho__social-icons__ancora__facebook" href="https://www.facebook.com/sheltontattoo.silva"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="cabecalho__social-icons__ancora__whatsapp" href="https://wa.me/5511975573591" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="cabecalho__whats">
+      <a href="hhttps://wa.me/5511975573591" target="_blank" rel="noopener noreferrer"><img src="whats.png"
+          alt="botão whatsapp"></a>
+    </div>
+    <nav class="cabecalho__navegacao">
+      <ul class="cabecalho__navegacao__lista">
+        <li class="cabecalho__navegacao__lista__item"><a href="index.html">INÍCIO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="about.html">SOBRE</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="tattoo.html">TATTOO</a></li>
+        <li id="design" class="cabecalho__navegacao__lista__item"><img class="cabecalho__maquina"
+            src="1749236599805.png" alt="maquina de tattoo"><a href="design.html">DESENHO</a></li>
+        <li class="cabecalho__navegacao__lista__item"><a href="screens.html">TELA</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+      <span class="menu-icon">&#9776;</span> <!-- Ícone de menu (☰) -->
+    </button>
+  </header>
+  <main class="principal">
+    <h1 class="about-title">Shelton Tattoo</h1>
+    <section class="fotos">
+      <h1 class="galeria_de_desenhos">Galeria de Desenhos</h1>
+      <div class="portifolio">
+        <div class="photo"><img src="desenho1.jpeg" alt="Foto 1"></div>
+        <div class="photo"><img src="desenho2.jpeg" alt="Foto 2"></div>
+        <div class="photo"><img src="desenho3.jpeg" alt="Foto 3"></div>
+        <div class="photo"><img src="desenho4.jpeg" alt="Foto 4"></div>
+        <div class="photo"><img src="desenho5.jpeg" alt="Foto 5"></div>
+        <div class="photo"><img src="desenho6.jpeg" alt="Foto 6"></div>
+        <div class="photo"><img src="desenho7.jpeg" alt="Foto 7"></div>
+        <div class="photo"><img src="desenho8.jpeg" alt="Foto 8"></div>
+        <div class="photo"><img src="desenho9.jpeg" alt="Foto 9"></div>
+        <div class="photo"><img src="desenho10.jpeg" alt="Foto 10"></div>
+        <div class="photo"><img src="desenho11.jpeg" alt="Foto 11"></div>
+        <div class="photo"><img src="desenho12.jpeg" alt="Foto 12"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Shelton Tattoo. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.photo').forEach(photo => {
+      observer.observe(photo);
+    });
+  </script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuList = document.querySelector('.cabecalho__navegacao__lista');
+    const menuIcon = menuToggle.querySelector('.menu-icon');
+    const fotosSection = document.querySelector('.fotos');
+
+    menuToggle.addEventListener('click', () => {
+      const menuAtivo = menuList.classList.toggle('ativo');
+      menuIcon.textContent = menuAtivo ? '✖' : '☰';
+      fotosSection.style.marginTop = menuAtivo ? '23vh' : '0';
+    });
+  </script>
+
+</body>
+
+</html>
