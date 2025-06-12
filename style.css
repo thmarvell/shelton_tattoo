@@ -451,7 +451,7 @@ footer {
     width: 100vw;
 
     & video {
-      max-width: 700px;
+      max-width: 500px;
       width: 100vw;
       height: auto;
       flex: 1;
@@ -556,16 +556,16 @@ footer {
     }
   }
 
-  .principal__foto {
+  .principal__video {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
-    width: 370px;
+    margin-top: 0vh;
+    width: 100vw;
 
-    & img {
-      max-width: 370px;
-      width: 370px;
+    & video {
+      max-width: 500px;
+      width: 100vw;
       height: auto;
       flex: 1;
       filter: grayscale(100%);
