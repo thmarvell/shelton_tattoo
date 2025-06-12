@@ -494,6 +494,7 @@ footer {
   }
 
   .about-title {
+    margin-top: 1vh;
     font-size: 2.0rem;
     width: 85%;
   }
@@ -503,7 +504,7 @@ footer {
   }
 
   .principal__logo-container {
-    padding-top: 6vh;
+    padding-top: 8vh;
   }
 
   .cabecalho__social-icons {
