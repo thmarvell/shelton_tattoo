@@ -433,13 +433,13 @@ footer {
   }
 
   .cabecalho__whats {
-    bottom: 50px;
-    left: 5px;
-    width: 88px;
-    height: 88px;
-
+    position: fixed;
+    bottom: 40px;
+    left: 80vw;
+    width: 58px;
+    height: 58px;
     & img {
-      width: 90px;
+      width: 60px;
     }
   }
 
