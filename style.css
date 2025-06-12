@@ -563,7 +563,7 @@ footer {
     margin-top: 0vh;
     height: auto;
     width: 100vw;
-
+    margin-bottom: 10vh;
     & video {
       max-width: 400px;
       width: 90vw;
